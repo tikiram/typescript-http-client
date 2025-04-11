@@ -8,12 +8,12 @@ npm i https://github.com/tikiram/typescript-http-client.git
 ```
 
 ```bash
-yarn add typescript-http-client@https://github.com/tikiram/typescript-http-client.git
+yarn add typescript-http-client@https://github.com/tikiram/typescript-http-client#0.2.0
 ```
 
 ## Example
 
-```js
+```typescript
 import {
     ErrorHandlerMiddleware,
     HTTPClient,
