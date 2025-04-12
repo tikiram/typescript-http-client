@@ -4,7 +4,7 @@
 ## Install
 
 ```bash
-npm i https://github.com/tikiram/typescript-http-client.git
+npm i https://github.com/tikiram/typescript-http-client#0.3.0
 ```
 
 ```bash
@@ -32,4 +32,23 @@ async function something() {
     console.log(response)    
 }
 
+```
+
+## Middleware
+
+```typescript
+class SomeLogMiddleware implements Middleware {
+  constructor(private readonly seconds: number) {}
+
+  async request(request: Request, next: NextFn): Promise<Response> {
+    
+    someLog(request)
+    
+    const response = await next(request);
+    
+    someLog(request)
+    
+    return response
+  }
+}
 ```
